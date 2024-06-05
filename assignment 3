@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div</title>
+    <style>
+        .styled-box {
+            background-color: #f0f8ff; 
+            border: 3px solid #4682b4; 
+            margin: 20px; 
+            padding: 15px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease; 
+        }
+
+        .styled-box:hover {
+            background-color: #b0c4de;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-box">
+        Celebal Technologies | CSI 2024     
+    </div>
+</body>
+</html>
