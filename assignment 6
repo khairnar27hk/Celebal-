@@ -1,0 +1,61 @@
+What commands would you use to stage all the changes and commit them with a meaningful commit message?
+
+1. You have made changes to multiple files in your Git repository and want to stage and commit these changes. 
+What commands would you use to stage all the changes and commit them with a meaningful commit message?
+- 
+git add .
+git commit -m "Your meaningful commit message"
+
+2. You have committed changes to a wrong branch. How would you move these commits to the correct branch?
+-
+git checkout correct-branch
+git cherry-pick <commit_hash1> <commit_hash2> ...
+git checkout wrong-branch
+git reset --hard HEAD~n  # Replace 'n' with the number of commits you want to move
+
+3. You want to create a new branch, make changes, and push the branch to the remote repository. Outline the steps you would take to create a new branch, commit changes, and push the branch to GitHub
+-
+git checkout -b new-branch
+git add .
+git commit -m "Your commit message"
+git push origin new-branch
+
+
+4. You want to contribute to an open-source project hosted on GitHub.What are the steps you would follow to fork the repository, make changes, create a pull request, and collaborate with the original project?
+-
+git clone https://github.com/your-username/repo-name.git
+cd repo-name
+git checkout -b feature-branch
+git add .
+git commit -m "Description of your changes"
+git push origin feature-branch
+
+
+5. You are working on a team project, and there are conflicts between your branch and the main branch. How would you resolve these merge conflicts? Provide the necessary commands and steps
+-
+git fetch origin
+git checkout your-branch
+git merge origin/main
+git add resolved-file
+git commit
+
+
+6. You want to create a feature branch based on the latest changes in the main branch. What commands would you use to create a new branch and automatically switch to it, ensuring it's up to date with the latest changes from the main branch?
+-
+git checkout main
+git pull origin main
+git checkout -b new-feature-branch
+
+
+7.You have made a series of commits, but you realize that a change made several commits ago is causing issues in your application. How would you revert to a specific commit, discarding all changes made after that commit?
+-
+git log
+git reset --hard <commit_hash>
+
+
+8.You have accidentally deleted a file in your Git repository and committed the change. What commands would you use to restore the deleted file from the previous commit?
+-
+git checkout HEAD~1 -- path/to/deleted-file
+git add path/to/deleted-file
+git commit -m "Restore deleted file"
+
